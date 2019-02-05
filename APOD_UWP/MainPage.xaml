@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid LostFocus="Grid_LostFocus">
         <CalendarDatePicker x:Name="MonthCalendar" HorizontalAlignment="Left" Margin="89,70,0,0" VerticalAlignment="Top" DateChanged="MonthCalendar_DateChanged"/>
         <Button x:Name="LaunchButton" Content="Go to APOD launch date" HorizontalAlignment="Left" Margin="89,121,0,0" VerticalAlignment="Top" Click="LaunchButton_Click"/>
         <CheckBox x:Name="ShowTodaysImageCheckBox" Content="Show today's image on start up" HorizontalAlignment="Left" Margin="89,179,0,0" VerticalAlignment="Top"/>
