@@ -18,7 +18,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="89,325,0,0" Text="Image Credit and Copyright:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="ImageCopyrightTextBox" HorizontalAlignment="Left" Margin="89,358,0,0" Text="TextBox" VerticalAlignment="Top" Width="193" IsReadOnly="True" Background="#FFFFFFC0"/>
         <TextBlock HorizontalAlignment="Left" Margin="89,409,0,0" Text="Description:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.19,0.263"/>
-        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="89,441,0,0" Text="TextBox" VerticalAlignment="Top" Height="142" Width="401" IsReadOnly="True" TextWrapping="Wrap" Background="#FFFFFFC0"/>
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="89,441,0,0" Text="TextBox" VerticalAlignment="Top" Height="190" Width="883" IsReadOnly="True" TextWrapping="Wrap" Background="#FFFFFFC0"/>
         <Border x:Name="PictureBorder" BorderBrush="Black" HorizontalAlignment="Left" Height="320" Margin="478,70,0,0" VerticalAlignment="Top" Width="494" BorderThickness="1,1,1,1">
             <Image x:Name="ImagePictureBox" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
         </Border>
