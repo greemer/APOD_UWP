@@ -22,9 +22,49 @@ namespace APOD_UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        // The objective of the NASA API portal is to make NASA data, including imagery, eminently accessible to application developers. 
+        const string EndpointURL = "https://api.nasa.gov/planetary/apod";
+
+        // June 16, 1995  : the APOD launch date.
+        DateTime launchDate = new DateTime(1995, 6, 16);
+
+        // A count of images downloaded today.
+        int imageCountToday;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            // Set the maximum date to today, and the minimum date to the date APOD was launched.
+            MonthCalendar.MinDate = launchDate;
+            MonthCalendar.MaxDate = DateTime.Today;
+        }
+
+        private void LaunchButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Make sure the full range of dates is available.
+            LimitRangeCheckBox.IsChecked = false;
+
+            // This will not load up the image, just sets the calendar to the APOD launch date.
+            MonthCalendar.Date = launchDate;
+        }
+
+        private void LimitRangeCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            // Set the calendar minimum date to the first of the current year.
+            var firstDayOfThisYear = new DateTime(DateTime.Today.Year, 1, 1);
+            MonthCalendar.MinDate = firstDayOfThisYear;
+        }
+
+        private void LimitRangeCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            // Set the calendar minimum date to the launch of the APOD program.
+            MonthCalendar.MinDate = launchDate;
+        }
+
+        private void MonthCalendar_DateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
+        {
+
         }
     }
 }
